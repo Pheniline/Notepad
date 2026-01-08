@@ -149,6 +149,63 @@ textarea:focus {
   cursor: pointer;
   transition: background 0.2s;
 }
+/* Light Theme */
+:root[data-theme="light"] {
+  --bg: #f9f9fb;
+  --text: #000;
+  --primary: #6c63ff;
+  --border: #ccc;
+  --input-bg: #fff;
+  --input-text: #000;
+  --button-text: #fff;
+}
+
+/* Dark Theme */
+:root[data-theme="dark"] {
+  --bg: #1e1e1e;
+  --text: #fff;
+  --primary: #6c63ff;
+  --border: #555;
+  --input-bg: #2c2c2c;
+  --input-text: #fff;
+  --button-text: #fff;
+}
+
+/* Apply globally */
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: sans-serif;
+}
+
+/* Inputs */
+input,
+textarea {
+  background-color: var(--input-bg);
+  color: var(--input-text);
+  border: 1px solid var(--border);
+}
+
+/* Buttons */
+button {
+  background-color: var(--primary);
+  color: var(--button-text);
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  padding: 8px 12px;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background-color: #5a54d1;
+}
+
+/* For dark mode toggle button text */
+.theme-toggle {
+  color: var(--text);
+  font-weight: bold;
+}
 
 .auth-row button:hover {
   background: #5a54d1; /* slightly darker on hover */
