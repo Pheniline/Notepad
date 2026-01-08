@@ -126,3 +126,30 @@ textarea:focus {
   background: var(--primary);
   color: #fff;
 }
+.auth-row {
+  display: flex;
+  gap: 10px; /* space between inputs and button */
+  align-items: center;
+  margin-top: 10px;
+}
+
+.auth-row input {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  flex: 1; /* inputs grow to fill available space */
+}
+
+.auth-row button {
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: none;
+  background: var(--primary);
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.auth-row button:hover {
+  background: #5a54d1; /* slightly darker on hover */
+}
