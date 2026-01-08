@@ -12,10 +12,16 @@ function App() {
   const [text, setText] = useState("");
   const [editingId, setEditingId] = useState(null);
   const [search, setSearch] = useState("");
-  const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
+
   const [color, setColor] = useState("#f9f9fb");
 
   const textareaRef = useRef(null);
+  const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
+
+  useEffect(() => {
+    document.documentElement.setAttribute("data-theme", theme);
+    localStorage.setItem("theme", theme);
+  }, [theme]);
 
   // THEME
   useEffect(() => {
