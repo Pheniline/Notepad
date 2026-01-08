@@ -6,30 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>frontend</title>
     <script>
-      (function () {
-        const theme = localStorage.getItem("theme") || "light";
-        document.documentElement.setAttribute("data-theme", theme);
-
-        // Optional: set CSS variables immediately
-        const root = document.documentElement;
-        if (theme === "dark") {
-          root.style.setProperty("--bg", "#1e1e1e");
-          root.style.setProperty("--text", "#fff");
-          root.style.setProperty("--input-bg", "#2c2c2c");
-          root.style.setProperty("--input-text", "#fff");
-          root.style.setProperty("--primary", "#6c63ff");
-          root.style.setProperty("--border", "#555");
-          root.style.setProperty("--button-text", "#fff");
-        } else {
-          root.style.setProperty("--bg", "#f9f9fb");
-          root.style.setProperty("--text", "#000");
-          root.style.setProperty("--input-bg", "#fff");
-          root.style.setProperty("--input-text", "#000");
-          root.style.setProperty("--primary", "#6c63ff");
-          root.style.setProperty("--border", "#ccc");
-          root.style.setProperty("--button-text", "#fff");
-        }
-      })();
+      // Immediately set the theme based on localStorage before React mounts
+      const savedTheme = localStorage.getItem("theme") || "light";
+      document.documentElement.setAttribute("data-theme", savedTheme);
     </script>
   </head>
   <body>
