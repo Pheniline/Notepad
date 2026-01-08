@@ -94,3 +94,35 @@ textarea:focus {
 .search-box {
   margin-bottom: 16px;
 }
+.section {
+  margin-top: 20px;
+}
+
+.section-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: #888;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+
+.composer-card {
+  background: var(--note-bg);
+  padding: 14px;
+  border-radius: 14px;
+}
+.note-actions button {
+  font-size: 14px; /* smaller icons */
+  padding: 4px 6px; /* smaller clickable area */
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  margin-left: 6px; /* spacing between buttons */
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.note-actions button:hover {
+  background: var(--primary);
+  color: #fff;
+}
