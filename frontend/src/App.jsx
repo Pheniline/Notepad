@@ -114,7 +114,7 @@ function App() {
   if (!user) {
     return (
       <div className="app-container">
-        <h2>{isSignup ? "Create Account" : "Login"}</h2>
+        <h2>{isSignup ? "Sign up" : "Login"}</h2>
         <input
           placeholder="Your name"
           value={name}
@@ -128,7 +128,7 @@ function App() {
         />
         {error && <p style={{ color: "red" }}>{error}</p>}
         <button className="primary-btn" onClick={authenticate}>
-          {isSignup ? "Sign Up" : "Login"}
+          {isSignup ? "Sign up" : "Login"}
         </button>
         <p
           style={{ marginTop: "10px", cursor: "pointer", color: "#6c63ff" }}
@@ -136,7 +136,7 @@ function App() {
         >
           {isSignup
             ? "Already have an account? Login"
-            : "No account? Create one"}
+            : "Don't have an account? Sign up"}
         </p>
       </div>
     );
@@ -146,7 +146,7 @@ function App() {
   return (
     <div className="app-container">
       <button
-        onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+        onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
         style={{
           background: "transparent",
           border: "2px",
@@ -155,7 +155,7 @@ function App() {
           cursor: "pointer",
         }}
       >
-        {theme === "light" ? "Light mode" : "Dark mode"}
+        {theme === "dark" ? "Light mode" : "Dark mode"}
       </button>
       <button
         onClick={logout}
@@ -182,7 +182,7 @@ function App() {
         />
       </div>
 
-      {/* COMPOSER */}
+      {/* ADDING NOTES */}
       <div className="section composer-card">
         <div className="section-title">Write a note</div>
         <textarea
